@@ -30,3 +30,9 @@ def set_logger_to(logger)
   ActiveRecord::Base.logger = logger
   ActiveRecord::Base.clear_active_connections!
 end
+
+### Machinist blueprints
+def bp
+  require 'machinist'
+  require File.join(RAILS_ROOT, 'spec', 'blueprint')
+end
